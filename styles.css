@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+
+    /* ## Colors */
+
+    /* ### Primary colors*/
+    --Brigt-Red: hsl(12, 88%, 59%);
+    --Dark-Blue: hsl(228, 39%, 23%);
+
+    /* ### Neutral */
+
+    --Dark-Grayish-Blue: hsl(227, 12%, 61%);
+    --Very-Dark-Blue: hsl(233, 12%, 13%);
+    --Very-Pale-Red: hsl(13, 100%, 96%);
+    --Vary-Light-Gray: hsl(0, 0%, 98%);
+
+}
+
+
+html {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 62.5%;
+}
+
+body {
+    background-image: url(./images/bg-tablet-pattern.svg) no-repeat;
+    overflow-x: hidden;
+
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 2em;
+}
+
+a {
+    text-decoration: none;
+    color: var(--Dark-Blue);
+}
+
+h1 {
+    font-size: 6rem;
+}
+
+p {
+    font-size: 1.6rem;
+}
+
+header {
+    padding: 2em 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul li {
+    list-style: none;
+    padding: 0 .5em;
+}
+
+.btn {
+    width: 10em;
+    padding: 1em;
+    border-radius: 2em;
+    outline: none;
+    border: none;
+    background-color: var(--Brigt-Red);
+    color: #fff;
+    font-size: 1rem;
+    box-shadow: 0px 4px 10px var(--Brigt-Red);
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    gap: 2em;
+    align-items: center;
+}
+
+li {
+    margin: 0 0rem;
+    overflow: hidden;
+    font-size: 1.4rem;
+    letter-spacing: .1em;
+    font-weight: 300;
+    list-style: none;
+    margin-left: 1em;
+
+}
+
+.menu-button-container {
+    display: none;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 6em;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+    display: block;
+    background-color: #000000;
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
+    z-index: 2;
+}
+
+.menu-button::before {
+    content: "";
+    margin-top: -8px;
+}
+
+.menu-button::after {
+    content: "";
+    margin-top: 8px;
+}
+
+#menu-toggle:checked+.menu-button-container .menu-button::before {
+    margin-top: 0px;
+    transform: rotate(405deg);
+    background-color: #000000;
+}
+
+#menu-toggle:checked+.menu-button-container .menu-button {
+    background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked+.menu-button-container .menu-button::after {
+    margin-top: 0px;
+    transform: rotate(-405deg);
+    background-color: #000000;
+
+}
+
+.nav-mid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.div-hero {
+    display: flex;
+}
+
+.div-hero-left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4em;
+}
+
+.div-hero-left h1 {
+    color: var(--Dark-Blue);
+}
+
+.div-hero-left p {
+    width: 50%;
+    line-height: 1.6em;
+    color: var(--Dark-Grayish-Blue);
+}
+
+.div-hero-right {
+    position: relative;
+}
+
+.img-pattern {
+    position: absolute;
+    top: -20em;
+    right: -30em;
+    z-index: -1;
+}
+
+.img-illustration {
+    margin: 4em 0 0 4em;
+}
+
+
+.bg-img {
+    position: absolute;
+    right: -12em;
+    top: -12em;
+    z-index: -1;
+}
+
+
+@media only screen and (max-width: 760px) {
+    .menu-button-container {
+        display: flex;
+    }
+
+    .nav-right {
+        display: none;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        width: 90%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        top: 8em;
+        background-color: #fff;
+        padding: 4em;
+    }
+
+    .menu li {
+        font-weight: 700;
+        margin: .5em 0;
+    }
+
+    #menu-toggle:checked~.menu {
+        display: flex;
+    }
+
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
