@@ -238,6 +238,14 @@ li {
 
 .feature-left {
     padding-right: 10em;
+    position: relative;
+}
+
+.feature-bg {
+    position: absolute;
+    left: -60em;
+    top: 35em;
+    z-index: -1;
 }
 
 .feature-left p {
@@ -265,6 +273,7 @@ li {
     gap: 4em;
 }
 
+
 .f-right {
     display: flex;
     flex-direction: column;
@@ -274,6 +283,44 @@ li {
 .f-right h4 {
     font-size: 2rem;
     color: var(--Dark-Blue);
+}
+
+.div-testimonials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.div-testimonials h2 {
+    font-size: 4rem;
+    color: var(--Dark-Blue);
+}
+
+.div-reviews {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4em;
+    margin: 15em 0 6em 0;
+}
+
+.testimonial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    text-align: center;
+    background-color: var(--Vary-Light-Gray);
+    padding: 4em;
+}
+
+.testimonial h4 {
+    font-size: 2rem;
+    color: var(--Dark-Blue);
+}
+
+.testimonial img {
+    margin-top: -10em;
 }
 
 
