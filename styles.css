@@ -51,11 +51,13 @@ h1 {
 }
 
 p {
-    font-size: 1.6rem;
+    font-size: 2rem;
+    line-height: 1.6em;
+    color: var(--Dark-Grayish-Blue);
 }
 
 header {
-    padding: 2em 0;
+    padding: 4em 0;
 }
 
 nav {
@@ -74,17 +76,23 @@ nav ul li {
     padding: 0 .5em;
 }
 
+section {
+    margin: 10em 0;
+}
+
 .btn {
-    width: 10em;
-    padding: 1em;
+    width: 12em;
+    padding: 1.2em;
     border-radius: 2em;
     outline: none;
     border: none;
     background-color: var(--Brigt-Red);
     color: #fff;
-    font-size: 1rem;
+    font-size: 1.5rem;
     box-shadow: 0px 4px 10px var(--Brigt-Red);
 }
+
+/* hero section */
 
 .menu {
     display: flex;
@@ -190,9 +198,7 @@ li {
 }
 
 .div-hero-left p {
-    width: 50%;
-    line-height: 1.6em;
-    color: var(--Dark-Grayish-Blue);
+    width: 70%;
 }
 
 .div-hero-right {
@@ -201,21 +207,73 @@ li {
 
 .img-pattern {
     position: absolute;
-    top: -20em;
+    top: -30em;
     right: -30em;
     z-index: -1;
 }
 
 .img-illustration {
-    margin: 4em 0 0 4em;
+    margin: 10em 0 0 8em;
 }
 
+#hero {
+    margin: 0;
+}
 
-.bg-img {
-    position: absolute;
-    right: -12em;
-    top: -12em;
-    z-index: -1;
+/* feature section */
+
+.div-feature {
+    display: flex;
+}
+
+.feature {
+    display: flex;
+    gap: 2em;
+}
+
+.feature-left,
+.feature-right {
+    width: 50%;
+}
+
+.feature-left {
+    padding-right: 10em;
+}
+
+.feature-left p {
+    width: 70%;
+    margin-top: 2em;
+}
+
+.feature-left h2 {
+    color: var(--Dark-Blue);
+    font-size: 4.5rem;
+}
+
+.f-left span {
+    background-color: var(--Brigt-Red);
+    color: #fff;
+    font-size: 2rem;
+    padding: .6em 1.4em;
+    border-radius: 3em;
+    font-weight: 700;
+}
+
+.feature-right {
+    display: flex;
+    flex-direction: column;
+    gap: 4em;
+}
+
+.f-right {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.f-right h4 {
+    font-size: 2rem;
+    color: var(--Dark-Blue);
 }
 
 
