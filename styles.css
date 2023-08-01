@@ -92,6 +92,10 @@ section {
     box-shadow: 0px 4px 10px var(--Brigt-Red);
 }
 
+.btn:hover {
+    cursor: pointer;
+}
+
 /* hero section */
 
 .menu {
@@ -285,6 +289,8 @@ li {
     color: var(--Dark-Blue);
 }
 
+/* testimonial section */
+
 .div-testimonials {
     display: flex;
     flex-direction: column;
@@ -322,6 +328,110 @@ li {
 .testimonial img {
     margin-top: -10em;
 }
+
+/* orange banner section */
+#orange {
+    background-color: var(--Brigt-Red);
+    overflow: hidden;
+    margin-bottom: 0;
+}
+
+.div-orange {
+    position: relative;
+
+}
+
+.div-orange img {
+    position: absolute;
+    width: 40%;
+    opacity: .1;
+}
+
+.div-orange .left-tablet {
+    top: 0;
+    left: 6em;
+}
+
+.div-orange .right-tablet {
+    right: -40em;
+    bottom: 20em;
+}
+
+.div-orange {
+    display: flex;
+    justify-content: space-between;
+    padding: 10em 2em;
+    align-items: center;
+    gap: 20em;
+}
+
+.div-orange .right .btn {
+    background-color: #fff;
+    color: var(--Brigt-Red);
+}
+
+.div-orange h1 {
+    font-size: 4rem;
+    width: 70%;
+    color: #fff;
+}
+
+/* footer section */
+footer {
+    background-color: var(--Dark-Blue);
+    padding: 8em 0;
+    color: #fff;
+}
+
+.div-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.div-footer-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 10em;
+}
+
+.div-footer-2 {
+    display: flex;
+    justify-content: space-between;
+    gap: 20em;
+
+}
+
+
+.footer-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+
+}
+
+.div-footer-3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.div-footer-3 .btn {
+    width: 5em;
+    box-shadow: none;
+}
+
+.email-input {
+    width: 16em;
+    padding: 1.2em;
+    border-radius: 4em;
+    margin-right: 2em;
+    outline: none;
+}
+
+.social-media img {
+    margin: 0 .5em;
+}
+
 
 
 @media only screen and (max-width: 760px) {
