@@ -46,6 +46,7 @@ a {
     color: var(--Dark-Blue);
 }
 
+
 h1 {
     font-size: 6rem;
 }
@@ -93,6 +94,7 @@ section {
 }
 
 .btn:hover {
+    filter: brightness(1.4);
     cursor: pointer;
 }
 
@@ -116,7 +118,6 @@ li {
     font-weight: 300;
     list-style: none;
     margin-left: 1em;
-
 }
 
 .menu-button-container {
@@ -401,12 +402,19 @@ footer {
 
 }
 
-
 .footer-menu {
     display: flex;
     flex-direction: column;
     gap: 3em;
 
+}
+
+.footer-menu a {
+    color: #fff;
+}
+
+.footer-menu a:hover {
+    color: var(--Brigt-Red);
 }
 
 .div-footer-3 {
@@ -421,6 +429,7 @@ footer {
 }
 
 .email-input {
+    color: var(--Brigt-Red);
     width: 16em;
     padding: 1.2em;
     border-radius: 4em;
@@ -428,8 +437,14 @@ footer {
     outline: none;
 }
 
-.social-media img {
+.social-media svg {
+    color: #fff;
     margin: 0 .5em;
+}
+
+.social-media svg:hover {
+    cursor: pointer;
+    color: var(--Brigt-Red);
 }
 
 
