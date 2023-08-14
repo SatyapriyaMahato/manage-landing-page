@@ -30,7 +30,7 @@ const validateEmail = (email) => {
 
 // Initialize Swiper 
 const swiper = new Swiper(".mySwiper", {
-    slidesPerView: 3,
+    slidesPerView: 1,
     spaceBetween: 30,
     autoplay: {
         delay: 2000,
@@ -39,4 +39,12 @@ const swiper = new Swiper(".mySwiper", {
         el: ".swiper-pagination",
         clickable: true,
     },
+    breakpoints: {
+        // when window width is >= 480px
+        760: {
+            slidesPerView: 3,
+            spaceBetween: 30
+        },
+        // when window width is >= 640px
+    }
 });

@@ -30,7 +30,6 @@ html {
 }
 
 body {
-    background-image: url(./images/bg-tablet-pattern.svg) no-repeat;
     overflow-x: hidden;
 
 }
@@ -52,7 +51,7 @@ h1 {
 }
 
 p {
-    font-size: 2rem;
+    font-size: 1.8rem;
     line-height: 1.6em;
     color: var(--Dark-Grayish-Blue);
 }
@@ -128,7 +127,6 @@ li {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-right: 6em;
 }
 
 #menu-toggle {
@@ -233,6 +231,7 @@ li {
 
 .feature {
     display: flex;
+    flex-direction: column;
     gap: 2em;
 }
 
@@ -263,6 +262,13 @@ li {
     font-size: 4.5rem;
 }
 
+.f-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3em;
+}
+
 .f-left span {
     background-color: var(--Brigt-Red);
     color: #fff;
@@ -283,9 +289,10 @@ li {
     display: flex;
     flex-direction: column;
     gap: 2em;
+    margin-left: 11em;
 }
 
-.f-right h4 {
+.f-left h4 {
     font-size: 2rem;
     color: var(--Dark-Blue);
 }
@@ -295,6 +302,24 @@ li {
 .swiper {
     width: 100%;
     height: 100%;
+}
+
+.swiper-pagination {
+    opacity: 1;
+    transition: b;
+}
+
+.swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border: 2px solid var(--Brigt-Red);
+    opacity: 1;
+
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--Brigt-Red) !important;
 }
 
 
@@ -310,6 +335,7 @@ li {
 }
 
 .div-reviews {
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -386,16 +412,16 @@ li {
 
 /* footer section */
 footer {
-    background-color: var(--Dark-Blue);
+    background-color: var(--Very-Dark-Blue);
     padding: 8em 0;
     color: #fff;
 }
 
 .div-footer {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
 }
-
 
 form span {
     padding-left: 3em;
@@ -443,12 +469,17 @@ form span {
     box-shadow: none;
 }
 
+form div {
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+}
+
 .input-control {
     color: var(--Brigt-Red);
     width: 16em;
     padding: 1.2em;
     border-radius: 4em;
-    margin-right: 2em;
     outline: none;
 }
 
@@ -459,9 +490,15 @@ form span {
     display: none;
 }
 
+.social-media {
+    display: flex;
+    gap: 2em;
+}
+
 .social-media svg {
     color: #fff;
     margin: 0 .5em;
+    scale: 1.6;
 }
 
 .social-media svg:hover {
@@ -470,8 +507,65 @@ form span {
 }
 
 
+@media screen and (max-width: 1080px) and (min-width: 768px) {
 
-@media only screen and (max-width: 760px) {
+    .div-hero-left h1 {
+        font-size: 4rem;
+    }
+
+    .feature-left h2 {
+        font-size: 3rem;
+    }
+
+    p {
+        font-size: 1.4rem;
+        width: 100%;
+    }
+
+    .img-illustration {
+        margin: 5em 0 3em;
+        width: 100%;
+    }
+
+    .img-pattern {
+        width: 150%;
+        top: -60%;
+        right: -60%;
+    }
+
+    .div-hero-left {
+        width: 80%;
+    }
+
+    .div-hero-right {
+        overflow-x: clip;
+
+    }
+
+    .nav-link {
+        font-size: 1rem;
+    }
+
+    .menu {
+        gap: 0;
+    }
+
+    .div-hero {
+        padding-right: 0;
+    }
+
+    .div-footer {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .div-footer-2 {
+        gap: 2em;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
     .menu-button-container {
         display: flex;
     }
@@ -491,6 +585,7 @@ form span {
         top: 8em;
         background-color: #fff;
         padding: 4em;
+        z-index: 2;
     }
 
     .menu li {
@@ -502,7 +597,178 @@ form span {
         display: flex;
     }
 
+    .div-hero {
+        flex-direction: column-reverse;
+        overflow-x: clip;
+        text-align: center;
+        align-items: center;
+    }
+
+    .div-hero-left {
+        width: 100%;
+        align-items: center;
+        gap: 0;
+    }
+
+    .div-hero h1 {
+        font-size: 3.8rem;
+    }
+
+    .div-hero p {
+        width: 100%;
+        margin: 1em 0 1.5em;
+    }
+
+    .img-illustration {
+        margin: 5em 0 3em;
+        width: 100%;
+    }
+
+    .img-pattern {
+        width: 150%;
+        top: -60%;
+        right: -60%;
+    }
+
+    .div-feature {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+    }
+
+    .feature-left {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        padding: 0 5em 5em 5em;
+    }
+
+    .feature-left h2 {
+        font-size: 3.2rem;
+    }
+
+    .feature-left p {
+        width: 100%;
+    }
+
+    .feature-left,
+    .feature-right {
+        width: 100%;
+        overflow-x: clip;
+    }
+
+    .feature-right {
+        padding-left: 2rem;
+    }
+
+    .feature-right p {
+        padding-right: 2rem;
+    }
+
+    .f-left {
+        border-radius: 2em 0 0 2em;
+        background-color: var(--Very-Pale-Red);
+    }
+
+    .f-left h4 {
+        width: 100%;
+        font-size: 1.4rem;
+    }
+
+    .f-right {
+        margin: 0;
+    }
+
+    .feature-bg {
+        width: 100%;
+        left: 25em;
+        top: -40em;
+    }
+
+    .div-testimonials h2 {
+        font-size: 3.6rem;
+    }
+
+    .div-reviews {
+        margin-top: 4em;
+    }
+
+    .div-orange {
+        flex-direction: column;
+        gap: 6em;
+        align-items: center;
+    }
+
+    .div-orange h1 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .div-orange .right-tablet {
+        display: none;
+    }
+
+    .div-orange .left-tablet {
+        width: 120%;
+        left: -35em;
+        top: 10em;
+    }
+
+    footer {
+        padding-bottom: 4em;
+    }
+
+    .div-footer {
+        flex-direction: column-reverse;
+        position: relative;
+    }
+
+    .div-footer-3 {
+        width: 100%;
+    }
+
+    .div-input form div {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .input-control {
+        width: 100%;
+    }
+
+    .div-copyright {
+        position: absolute;
+        bottom: 0em;
+        width: 80%;
+        text-align: center;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+
+    }
+
+    .div-copyright p {
+        font-size: 1.2rem;
+    }
+
+    .div-footer-2 {
+        margin: 6em 0;
+        gap: 0;
+    }
+
+    .div-footer-1 {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 6em;
+        margin-bottom: 10em;
+    }
+
 }
+
 
 .attribution {
     font-size: 11px;
